@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 public class StudentSearch {
+
+	// checks whether a student exists or not by id
     public boolean studentExists(ArrayList<Student> students, String id) throws Exception {
         if (students.isEmpty()) {
             throw new Exception("Students list should not be empty!");
@@ -12,6 +14,7 @@ public class StudentSearch {
         return false;
     }
 
+    // finds given student and returns it as an object
 	public Student findOne(ArrayList<Student> students, String name) throws Exception {
 	   for (Student student: students)
 	       if (student.getName().equals(name))
@@ -20,6 +23,7 @@ public class StudentSearch {
 	   throw new Exception("There is no student with the given name!");
 	}
 
+	// finds all students with the given name and returns it as an ArrayList of Students
 	public ArrayList<Student> findAll(ArrayList<Student> students, String name) throws Exception {
 	   ArrayList<Student> result = new ArrayList<Student>();
 	   for (Student student: students)
